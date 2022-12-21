@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { UserService } from '../api/user.service';
 
@@ -19,7 +20,8 @@ export class RegisterPage implements OnInit {
   constructor(
     private fb: FormBuilder , 
     private userService: UserService,
-    private toastController : ToastController
+    private toastController : ToastController,
+    private router :Router
     ) { }
 
   ngOnInit() {
@@ -34,6 +36,8 @@ export class RegisterPage implements OnInit {
       .subscribe(
         (data) =>{
           console.log('Hola',data);
+          this.mostrarMensaje('El usuario ha sido creado correctamente')
+          this.router.navigate(['/login'])    
         },
         (error)=> {
           console.log('Ocurrio un error',error.error)

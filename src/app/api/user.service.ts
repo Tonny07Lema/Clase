@@ -19,4 +19,8 @@ export class UserService {
     return this.httpClient.post<Usuario>(finalUrl,JSON.stringify(usuario),this.httpOptions);
   }
 
+  login(usuario : Usuario):Observable<any> {
+    let finalUrl = this.endpoint + 'login';
+    return this.httpClient.post<Usuario>(finalUrl,JSON.stringify(usuario),this.httpOptions);
+  }
 }

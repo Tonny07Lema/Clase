@@ -6,4 +6,23 @@
 
 <ion-content>
 
+ <form [formGroup]="userLoginForm" (ngSubmit)="loginp()">
+    <ion-item>
+      <ion-label>
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-label>
+      <ion-input formControlName="username" id="username" type="text" placeholder="Usuario *" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-icon name="lock-open-outline"></ion-icon>
+      </ion-label>
+        <ion-input formControlName="password" id="password" type="password" placeholder="Contraseña *" required></ion-input>      
+    </ion-item>              
+
+    <ion-button type="submit" expand="block">Iniciar Sesion</ion-button>
+  
+  </form>   
+
 </ion-content>
