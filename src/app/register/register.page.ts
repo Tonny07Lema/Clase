@@ -36,7 +36,7 @@ export class RegisterPage implements OnInit {
       .subscribe(
         (data) =>{
           console.log('Hola',data);
-          this.mostrarMensaje('El usuario ha sido creado correctamente')
+          this.mostrarMensaje('Usuario creado con exito')
           this.router.navigate(['/login'])    
         },
         (error)=> {

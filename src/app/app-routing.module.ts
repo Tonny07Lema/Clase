@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'register',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -22,6 +22,22 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'cliente-d',
+    loadChildren: () => import('./cliente-d/cliente-d.module').then( m => m.ClienteDPageModule)
+  },
+  {
+    path: 'servicio-d',
+    loadChildren: () => import('./servicio-d/servicio-d.module').then( m => m.ServicioDPageModule)
+  },
+  {
+    path: 'factura-d',
+    loadChildren: () => import('./factura-d/factura-d.module').then( m => m.FacturaDPageModule)
+  },
+  {
+    path: 'registar-cliente',
+    loadChildren: () => import('./registar-cliente/registar-cliente.module').then( m => m.RegistarClientePageModule)
   },
 ];
 

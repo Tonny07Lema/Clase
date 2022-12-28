@@ -33,9 +33,10 @@ export class LoginPage implements OnInit {
       .subscribe(
         (data) =>{
           console.log('Hola',data);
-          this.mostrarMensaje('El usuario ha sido creado correctamente')
-          this.router.navigate(['/home'])    
-        },
+          this.mostrarMensaje('Sesion Iniciada')
+          this.router.navigate(['/inicio'])    
+        }
+        ,
         (error)=> {
           console.log('Ocurrio un error',error.error)
           this.mostrarMensaje (error.error)

@@ -1,34 +1,62 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-title>Registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-  <form [formGroup]="userRegisterForm" (ngSubmit)="register()">
-    <ion-item>
-      <ion-label>
-        <ion-icon name="mail-outline"></ion-icon>
-      </ion-label>
-      <ion-input formControlName="username" id="username" type="text" placeholder="Correo electrónico *" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        <ion-icon name="lock-open-outline"></ion-icon>
-      </ion-label>
-        <ion-input formControlName="password" id="password" type="password" placeholder="Contraseña *" required></ion-input>      
-    </ion-item>      
-
-    <ion-item>
-      <ion-label>
-        <ion-icon name="lock-open-outline"></ion-icon>
-      </ion-label>
-        <ion-input formControlName="confirmPassword" id="confirmPassword" type="password" placeholder="Confirmar Contraseña *" required></ion-input>      
-    </ion-item>        
-
-    <ion-button type="submit" expand="block">Registrarse</ion-button>
-  
-  </form>   
+  <ion-grid class="grid1">
+    <ion-row class="row1">
+      <ion-col>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row2">
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-slide>
+    <div class="contaier-login">
+      <ion-grid>
+        <form  [formGroup]="userRegisterForm" (ngSubmit)="register()">
+        <ion-row>
+          <ion-col>
+            <h1>Registro</h1>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+                <ion-item>
+                  <ion-icon name="mail"></ion-icon>
+                  <ion-input formControlName="username" id="username" type="text" required
+                    placeholder="Correo electrónico *" class="Text"></ion-input>
+                </ion-item>
+                <br />
+                <ion-item>
+                  <ion-icon name="lock-open"></ion-icon>
+                  <ion-input formControlName="password" id="password" type="password" required
+                    placeholder="Contraseña *" class="Text"></ion-input>
+                </ion-item>
+                <br />
+                <ion-item>
+                  <ion-icon name="lock-open"></ion-icon>
+                  <ion-input formControlName="confirmPassword" id="confirmPassword" type="password" required
+                    placeholder="Confirmar contraseña *" class="Text"></ion-input>
+                </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" expand="block">Registrarse</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+      </ion-grid>
+    </div>
+  </ion-slide>
 </ion-content>
