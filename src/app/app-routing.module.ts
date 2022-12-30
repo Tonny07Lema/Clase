@@ -39,6 +39,22 @@ const routes: Routes = [
     path: 'registar-cliente',
     loadChildren: () => import('./registar-cliente/registar-cliente.module').then( m => m.RegistarClientePageModule)
   },
+  {
+    path: 'listar-cliente',
+    loadChildren: () => import('./listar-cliente/listar-cliente.module').then( m => m.ListarClientePageModule)
+  },
+  {
+    path: 'actualizar-cliente',
+    loadChildren: () => import('./actualizar-cliente/actualizar-cliente.module').then( m => m.ActualizarClientePageModule)
+  },
+  {
+    path: 'buscar-cliente',
+    loadChildren: () => import('./buscar-cliente/buscar-cliente.module').then( m => m.BuscarClientePageModule)
+  },
+  {
+    path: 'registrar-servicio',
+    loadChildren: () => import('./registrar-servicio/registrar-servicio.module').then( m => m.RegistrarServicioPageModule)
+  },
 ];
 
 @NgModule({

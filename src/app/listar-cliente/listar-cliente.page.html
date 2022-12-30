@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Clientes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="cliente-d"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="Diseño" *ngFor="let cli of listaCliente">
+    <ion-card-header>
+      <ion-card-title>{{cli.nombre}}</ion-card-title>
+      <ion-card-subtitle>{{cli.tipoIdentificacion}}</ion-card-subtitle>
+      <ion-card-subtitle>{{cli.identificacionNumero}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-icon name="map"></ion-icon>
+      Direccion: {{cli.direccion}}
+      <br>
+      <ion-icon name="call"></ion-icon>
+      Telefono: {{cli.telefono}}
+      <br>
+      <ion-icon name="mail"></ion-icon>
+      Correo: {{cli.correoElectronico}}
+    </ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-activatable ripple-parent custom-parent" (click)="actualizar(cli.id)" >
+            Editar
+            <ion-ripple-effect></ion-ripple-effect>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-activatable ripple-parent custom-ripple" (click)="eliminarCliente(cli.id)" >
+            Eliminar
+            <ion-ripple-effect></ion-ripple-effect>
+          </div>
+        </ion-col>      
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

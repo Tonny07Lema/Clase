@@ -4,9 +4,9 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RegistarClientePageRoutingModule } from './registar-cliente-routing.module';
+import { BuscarClientePageRoutingModule } from './buscar-cliente-routing.module';
 
-import { RegistarClientePage } from './registar-cliente.page';
+import { BuscarClientePage } from './buscar-cliente.page';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { RegistarClientePage } from './registar-cliente.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    RegistarClientePageRoutingModule
+    BuscarClientePageRoutingModule
   ],
-  declarations: [RegistarClientePage]
+  declarations: [BuscarClientePage]
 })
-export class RegistarClientePageModule {}
+export class BuscarClientePageModule {}

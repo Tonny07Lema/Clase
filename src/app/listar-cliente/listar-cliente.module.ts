@@ -4,18 +4,18 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RegistarClientePageRoutingModule } from './registar-cliente-routing.module';
+import { ListarClientePageRoutingModule } from './listar-cliente-routing.module';
 
-import { RegistarClientePage } from './registar-cliente.page';
+import { ListarClientePage } from './listar-cliente.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
     IonicModule,
-    RegistarClientePageRoutingModule
+    ReactiveFormsModule,
+    ListarClientePageRoutingModule
   ],
-  declarations: [RegistarClientePage]
+  declarations: [ListarClientePage]
 })
-export class RegistarClientePageModule {}
+export class ListarClientePageModule {}

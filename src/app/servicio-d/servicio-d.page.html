@@ -53,7 +53,44 @@
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
-        Tap the button in the toolbar to open the menu.
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-button class="info" [routerDirection]="'root'" [routerLink]="'/registar-cliente'">
+                <ion-card padding>
+                  <img src="./assets/imagen1.png">
+                  <ion-card-subtitle>
+                    <a class="texto">Registrar</a>
+                  </ion-card-subtitle>
+                </ion-card>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button class="info" [routerDirection]="'root'" [routerLink]="'/listar-cliente'">
+                <ion-card padding>
+                  <img src="./assets/imagen4.png">
+                  <ion-card-subtitle>
+                    <a class="texto">Listar</a>
+                  </ion-card-subtitle>
+                </ion-card>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button class="info" [routerDirection]="'root'" [routerLink]="'/buscar-cliente'">
+                <ion-card padding>
+                  <img src="./assets/imagen5.jpg">
+                  <ion-card-subtitle>
+                    <a class="texto" >Buscar</a>
+                  </ion-card-subtitle>
+                </ion-card>
+              </ion-button>
+            </ion-col>
+          <ion-col>
+          </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-content>
     </div>
   </ion-app>
