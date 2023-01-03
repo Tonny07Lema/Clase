@@ -33,6 +33,8 @@ export class LoginPage implements OnInit {
       .subscribe(
         (data) =>{
           console.log('Hola',data);
+          let IdUser = data.id;
+          sessionStorage.setItem("IdUser", IdUser);
           this.mostrarMensaje('Sesion Iniciada')
           this.router.navigate(['/inicio'])    
         }

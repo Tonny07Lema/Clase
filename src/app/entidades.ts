@@ -12,3 +12,10 @@ export class Cliente {
     telefono: string="";
     correoElectronico: string="";
 }
+
+export class Servicio {
+    id!:number;
+    descripcion: string="";
+    precioUnitario!:number;
+    usuarioId!: number;
+}

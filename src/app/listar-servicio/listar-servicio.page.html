@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Servicios</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="servicio-d"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="Diseño" *ngFor="let ser of listaSerivicio">
+    <ion-card-header>
+      <ion-card-title>{{ser.descripcion}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-icon name="cash"></ion-icon>
+      Precio: {{ser.precioUnitario}}
+    </ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-activatable ripple-parent custom-parent" (click)="actualizarServicio(ser.id)" >
+            Editar
+            <ion-ripple-effect></ion-ripple-effect>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="ion-activatable ripple-parent custom-ripple" (click)="eliminarServicio(ser.id)" >
+            Eliminar
+            <ion-ripple-effect></ion-ripple-effect>
+          </div>
+        </ion-col>      
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

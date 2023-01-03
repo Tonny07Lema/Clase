@@ -55,6 +55,14 @@ const routes: Routes = [
     path: 'registrar-servicio',
     loadChildren: () => import('./registrar-servicio/registrar-servicio.module').then( m => m.RegistrarServicioPageModule)
   },
+  {
+    path: 'listar-servicio',
+    loadChildren: () => import('./listar-servicio/listar-servicio.module').then( m => m.ListarServicioPageModule)
+  },
+  {
+    path: 'actualizar-servicio',
+    loadChildren: () => import('./actualizar-servicio/actualizar-servicio.module').then( m => m.ActualizarServicioPageModule)
+  },
 ];
 
 @NgModule({

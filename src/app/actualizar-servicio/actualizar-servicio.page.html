@@ -1,15 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registrarServicio</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="servicio-d"></ion-back-button>
-    </ion-buttons>
+    <ion-title>Actualizar Servicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-grid>
-    <form [formGroup]="ServicioRegisterForm" (ngSubmit)="registarServicio()">
+    <form [formGroup]="ServicioUpdateForm" (ngSubmit)="ActualizarServicio()">
       <ion-row>
         <ion-col>
           <ion-list>
@@ -28,7 +25,12 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button type="submit" expand="block">Registrar</ion-button>
+          <ion-button type="submit" expand="block">Actualizar</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block" (click)="regresar()">Regresar</ion-button>
         </ion-col>
       </ion-row>
     </form>

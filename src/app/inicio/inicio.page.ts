@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  constructor() { }
+  IdUser: any ;
+  constructor() { 
+    
+  }
 
   ngOnInit() {
+  this.IdUser = sessionStorage.getItem("IdUser");
+  console.log(this.IdUser);
   }
 
 }
