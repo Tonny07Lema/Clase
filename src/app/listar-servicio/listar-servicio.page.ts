@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServicioService } from '../api/servicio.service';
 import { ToastController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
+import { Detalle, Servicio } from 'src/app/entidades';
 import { ActualizarServicioPage } from '../actualizar-servicio/actualizar-servicio.page';
 
 @Component({
@@ -10,8 +11,19 @@ import { ActualizarServicioPage } from '../actualizar-servicio/actualizar-servic
   styleUrls: ['./listar-servicio.page.scss'],
 })
 export class ListarServicioPage implements OnInit {
-  IdUser: any;
+  IdUser: any="";
   public listaSerivicio: any = [];
+
+  agregarC(service:Servicio): void{
+    let detalle = new Detalle;
+    detalle.cantidad = 1
+    detalle.precioUnitario = service.precioUnitario
+    detalle.total = service.precioUnitario
+    detalle.servicioId = service.id
+    this.mostrarMensaje("Servicio Agregado a la factura");
+    this.servicioService.agregarAlCarrito(detalle);
+  }
+
   constructor(
     private servicioService: ServicioService,
     private toastController: ToastController,

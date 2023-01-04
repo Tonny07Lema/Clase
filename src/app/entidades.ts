@@ -19,3 +19,20 @@ export class Servicio {
     precioUnitario!:number;
     usuarioId!: number;
 }
+
+export class Detalle {
+    cantidad!: number;
+    precioUnitario!: number;
+    total!: number;
+    servicioId!: number;
+}
+
+export class Factura {
+    fechaDeEmision!: Date;
+    subtotal!: number;
+    impuesto!: number;
+    total!: number;
+    clienteId!: number;
+    usuarioId!: number;
+    detalles!: Detalle[];
+}

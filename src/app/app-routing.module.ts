@@ -63,6 +63,22 @@ const routes: Routes = [
     path: 'actualizar-servicio',
     loadChildren: () => import('./actualizar-servicio/actualizar-servicio.module').then( m => m.ActualizarServicioPageModule)
   },
+  {
+    path: 'registrarfactura',
+    loadChildren: () => import('./registrarfactura/registrarfactura.module').then( m => m.RegistrarfacturaPageModule)
+  },
+  {
+    path: 'listar-factura',
+    loadChildren: () => import('./listar-factura/listar-factura.module').then( m => m.ListarFacturaPageModule)
+  },
+  {
+    path: 'listar-factura-emitidas',
+    loadChildren: () => import('./listar-factura-emitidas/listar-factura-emitidas.module').then( m => m.ListarFacturaEmitidasPageModule)
+  },
+  {
+    path: 'listar-factura-anulada',
+    loadChildren: () => import('./listar-factura-anulada/listar-factura-anulada.module').then( m => m.ListarFacturaAnuladaPageModule)
+  },
 ];
 
 @NgModule({

@@ -49,11 +49,56 @@
           <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
-          <ion-title class="Titulo">Menu</ion-title>
+          <ion-title class="Titulo">Opciones</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
-        Tap the button in the toolbar to open the menu.
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-button class="info" [routerDirection]="'root'" [routerLink]="'/registrarfactura'">
+                <ion-card padding>
+                  <img src="./assets/factura.jpg">
+                  <ion-card-subtitle>
+                    <a class="texto">Registrar</a>
+                  </ion-card-subtitle>
+                </ion-card>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button class="info" [routerDirection]="'root'" [routerLink]="'/listar-factura'">
+                <ion-card padding>
+                  <img src="./assets/lista.jpg">
+                  <ion-card-subtitle>
+                    <a class="texto">Listar</a>
+                  </ion-card-subtitle>
+                </ion-card>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button class="info" [routerDirection]="'root'" [routerLink]="'/listar-factura-emitidas'">
+                <ion-card padding>
+                  <img src="./assets/facturasusuario.jpg">
+                  <ion-card-subtitle>
+                    <a class="texto">Emitidas</a>
+                  </ion-card-subtitle>
+                </ion-card>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button class="info" [routerDirection]="'root'" [routerLink]="'/listar-factura-anulada'">
+                <ion-card padding>
+                  <img src="./assets/anular.png">
+                  <ion-card-subtitle>
+                    <a class="texto">Anuladas</a>
+                  </ion-card-subtitle>
+                </ion-card>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-content>
     </div>
   </ion-app>
